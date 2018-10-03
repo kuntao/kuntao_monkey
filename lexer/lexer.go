@@ -10,7 +10,7 @@ type Lexer struct {
 }
 
 func New(input string) *Lexer {
-	l := &Lexer{ input: input }
+	l := &Lexer{input: input}
 	l.readChar()
 	return l
 }
@@ -83,7 +83,7 @@ func isLetter(ch byte) bool {
 
 func newToken(tokenType token.TokenType, ch byte) token.Token {
 	return token.Token{
-		Type: tokenType,
+		Type:    tokenType,
 		Literal: string(ch),
 	}
 }
