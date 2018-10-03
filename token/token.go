@@ -12,8 +12,8 @@ const (
 	EOF     = "EOF"
 
 	// 識別子 + リテラル
-	IDENT = "IDENT"  // add, foobar, x, y, ...
-	INT   = "INT"    // 123456
+	IDENT = "IDENT" // add, foobar, x, y, ...
+	INT   = "INT"   // 123456
 
 	// 演算子
 	ASSIGN = "="
@@ -33,8 +33,8 @@ const (
 	LET      = "LET"
 )
 
-var keywords = map[string]TokenType {
-	"fn": FUNCTION,
+var keywords = map[string]TokenType{
+	"fn":  FUNCTION,
 	"let": LET,
 }
 
