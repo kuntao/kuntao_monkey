@@ -4,6 +4,7 @@ import (
 	"testing"
 
 	"github.com/kuntao/kuntao_monkey/token"
+	"github.com/stretchr/testify/assert"
 )
 
 func TestNextToken(t *testing.T) {
@@ -64,14 +65,7 @@ let result = add(five, ten);
 	for i, tt := range tests {
 		tok := l.NextToken()
 
-		if tok.Type != tt.expectedType {
-			t.Fatalf("tests[%d] - tokentype wrong. expected=%q, got=%q",
-				i, tt.expectedType, tok.Type)		
-		}
-
-		if tok.Literal != tt.expectedLiteral {
-			t.Fatalf("tests[%d] - literal wrong. expected=%q, got=%q",
-				i, tt.expectedLiteral, tok.Literal)
-		}
+		assert.Equal(t, tt.expectedType, tok.Type, "tests[%d] - tokentype wrong.", i)
+		assert.Equal(t, tt.expectedLiteral, tok.Literal, "tests[%d] - tokentype wrong.", i)
 	}
 }
