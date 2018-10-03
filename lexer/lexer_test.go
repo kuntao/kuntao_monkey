@@ -4,7 +4,7 @@ import (
 	"testing"
 
 	"github.com/kuntao/kuntao_monkey/token"
-	"github.com/stretchr/testify/assert"
+	"github.com/kuntao/testify/assert"
 )
 
 func TestNextToken(t *testing.T) {
