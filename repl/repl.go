@@ -9,7 +9,7 @@ import (
 	"github.com/kuntao/kuntao_monkey/token"
 )
 
-const PROMPT = ">>"
+const PROMPT = ">> "
 
 func Start(in io.Reader, out io.Writer) {
 	scanner := bufio.NewScanner(in)
